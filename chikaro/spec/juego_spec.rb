@@ -21,4 +21,14 @@ describe Juego do
 		respuesta.should==false 
 	end
 
+ 	it " Cuando inicio juego puntaje inicial = 5" do
+		# Arrange  
+		modelo = Juego.new("casa")
+		#Act -> actuo o ejecuto
+		respuesta = modelo.get_puntaje()
+		#Assert (compruebo el comportamiento esperado)
+		respuesta.should==5 
+	end
+
+
 end
