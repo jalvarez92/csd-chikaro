@@ -33,7 +33,8 @@ get '/envia_letra' do
 	if letra.length > 1
 		@@msj="Debe ingresar solo una letra"	
 	elsif letra.length == 1 
-           if @@juego.enviar_letra(letra) 
+           if @@juego.enviar_letra(letra)
+			  @@espacios = @@juego.get_espacios()
  			  @@msj = "Acertaste"
 		   else
 			  @@msj= "Fallaste"

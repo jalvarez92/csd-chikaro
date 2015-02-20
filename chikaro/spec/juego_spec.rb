@@ -42,4 +42,18 @@ describe Juego do
 		respuesta.should=="*****"
 	end	
 
+	it "Cuando se ingresa una letra que pertenece a la palabra secreta deberia ser *a*a" do
+		modelo = Juego.new("casa")
+		modelo.enviar_letra("a")
+		respuesta = modelo.get_espacios()
+		respuesta.should == "*a*a"
+	end
+
+	it "Cuando se ingresa una letra que no pertenece a la palabra secreta deberia ser ****" do
+		modelo = Juego.new("casa")
+		modelo.enviar_letra("d")
+		respuesta = modelo.get_espacios()
+		respuesta.should == "****"
+	end
+
 end
