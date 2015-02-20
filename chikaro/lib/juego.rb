@@ -2,6 +2,7 @@ class Juego
 	def initialize(palabra)
     	@palabra = palabra
 		@espacios = "*"*palabra.length
+		@letras = ""
  	end
 
 	def enviar_letra(letra)
@@ -10,11 +11,20 @@ class Juego
 			@espacios = ""
 			@palabra.each_char do  |c| 
 				if c == letra 
-					@espacios+= letra 
-				else 
-					@espacios+= "*" 
+					@letras+= letra
+					#@espacios+= letra
+				#else 
+					#@espacios+= "*" 
 				end 							
-			end				
+			end	
+			@espacios = ""
+			@palabra.each_char do |d|
+				if @letras.include?(d)
+					@espacios+= d
+				else
+					@espacios+= "*" 
+				end			
+			end
 		end
 		resultado
     end
