@@ -41,5 +41,5 @@ get '/envia_letra' do
     else
         @@msj="Debe capturar una letra"
 	end
-	erb :home
+	erb :jugar
 end

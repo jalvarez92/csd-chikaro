@@ -6,6 +6,15 @@
 		<br/>
 		Tu puntuacion actual es <%= @@puntuacion %>
 		<br />
-		<%= @@espacios%>
+		Adivinar la palabra: <%= @@espacios%>
+		<br/>
+		<center>
+			<form action="/envia_letra">
+				<label for="letra">Ingresa la letra</label>
+				<input type="text" name="letra" id="letra" />
+				<input type="submit" name="comprobar" id="comprobar" value="Comprobar" />
+			</form>
+			<h4><%= @@msj %></h4>
+		</center>
 	</body>
 </html>

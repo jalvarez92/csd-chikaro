@@ -12,7 +12,7 @@ end
 
 Given(/^envia letra "(.*?)"$/) do |arg1|
    fill_in("letra", :with => arg1)
-   click_button("enviar")
+   click_button("comprobar")
 
 end
 
