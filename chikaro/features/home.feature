@@ -28,7 +28,7 @@ Then debe aparecer "Chikaro"
 # Given ingrese a la aplicacion
 # When ingreso mi "John Doe"
 # And inicio partida
-# Then deberia ver mi puntaje en "0"
+# Then deberia ver mi puntaje en "5"
 
 
 # Feature: Escribir letra
@@ -45,6 +45,7 @@ Then debe aparecer "Chikaro"
 # Given inicie el juego
 # When ingreso "z"
 # Then deberia ver "Fallaste"
+# And puntaje debria ser "4"
 
 # Given inicie el juego
 # When ingreso "a"
@@ -68,11 +69,11 @@ Then debe aparecer "Chikaro"
 # Scenario: Acerte palabra
 # Given termine juego
 # And acerte palabra
-# Then deberia ver "Ganas una moneda"
-# And puntaje debe ser "1"
+# Then deberia ver "Felicidades has adivinado la palabra"
 
 # Scenario: Falle palabra
 # Given termine juego
 # And falle palabra
-# Then deberia ver "Lo siento. No has acumulado moneda"
+# Then deberia ver "Lo siento. No has adivinado la palabra"
+# And deberia ver la palabra secreta
 
