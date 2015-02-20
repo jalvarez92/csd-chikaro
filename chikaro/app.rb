@@ -11,6 +11,7 @@ end
 get '/iniciar' do
 	@@nombre = params['nombre']
     @@puntuacion=@@juego.get_puntaje()
+	@@espacios = @@juego.get_espacios()
 	erb :jugar	   
 	#if letra.length > 1
 	#	@@msj="Debe ingresar solo una letra"	

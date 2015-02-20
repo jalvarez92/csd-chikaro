@@ -9,6 +9,7 @@ Scenario: Titulo Inicial
 Given ingreso a la aplicacion
 #When 
 Then debe aparecer "Chikaro"
+And debe aparecer "Iniciar juego"
 
 
 # Feature: Iniciar partida

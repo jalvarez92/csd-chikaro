@@ -40,3 +40,12 @@ Then(/^deberia ver mi puntaje en "(.*?)"$/) do |arg1|
  last_response.body.should =~ /#{arg1}/m
 end
 
+Given(/^inicio el juego$/) do
+  visit '/'
+  fill_in("nombre", :with => "Sergio")
+  click_button("iniciar")
+end
+
+Then(/^deberia ver "(.*?)"$/) do |arg1|
+ last_response.body.should =~ /#{arg1}/m
+end

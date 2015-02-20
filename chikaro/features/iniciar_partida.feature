@@ -7,10 +7,15 @@ Scenario: Ver mi nombre en pantalla de juego
 Given ingrese a la aplicacion
 When ingreso "John Doe"
 And inicio partida
-Then deberia ver "John Doe" en la pantalla de juego
+Then deberia ver "Bienvenido John Doe" en la pantalla de juego
 
 Scenario: Ver puntaje inicial en pantalla de juego
 Given ingrese a la aplicacion
 When ingreso "John Doe"
 And inicio partida
-Then deberia ver mi puntaje en "5"
+Then deberia ver mi puntaje en "Tu puntuacion actual es 5"
+
+Scenario: Ver espacio para palabra secreta en pantalla de juego
+Given inicio el juego
+Then deberia ver "\*"
+

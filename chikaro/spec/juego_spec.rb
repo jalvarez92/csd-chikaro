@@ -30,5 +30,16 @@ describe Juego do
 		respuesta.should==5 
 	end
 
+	it "Cuando inicio juego y palabra es casa entonces espacio deberia ser ****" do
+		modelo = Juego.new("casa")
+		respuesta = modelo.get_espacios()
+		respuesta.should=="****"
+	end
+
+	it "Cuando inicio juego y palabra es casas entonces espacio deberia ser *****" do
+		modelo = Juego.new("casas")
+		respuesta = modelo.get_espacios()
+		respuesta.should=="*****"
+	end	
 
 end
