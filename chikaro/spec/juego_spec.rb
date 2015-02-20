@@ -56,4 +56,13 @@ describe Juego do
 		respuesta.should == "****"
 	end
 
+	it "Cuando se aciertan todas las letras de la palabra secreta deberia ver el mensaje Adivinaste la palabra secreta" do
+		modelo = Juego.new("casa")
+		modelo.enviar_letra("a")
+		modelo.enviar_letra("c")
+		modelo.enviar_letra("s")
+		respuesta = modelo.get_espacios()
+		respuesta.should == "Adivinaste la palabra secreta"
+	end
+
 end

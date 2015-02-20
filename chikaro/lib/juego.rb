@@ -26,7 +26,11 @@ class Juego
 				end			
 			end
 		end
-		resultado
+		if @espacios.include?("*")
+			resultado
+		else
+			@espacios = "Adivinaste la palabra secreta"
+		end
     end
 
 	def get_puntaje() 
